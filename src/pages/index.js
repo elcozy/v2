@@ -8,6 +8,7 @@ import AboutMe from "../components/js/aboutme";
 import Contact from "../components/js/contact";
 import Footer from "../components/js/footer";
 import { device } from "../components/data";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const { mobile, mobileL, tablet, desktop } = device;
 
@@ -263,6 +264,9 @@ const IndexPage = () => {
   return (
     <>
       <PageStyles>
+        <OutboundLink href="https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/">
+          Visit the Google Analytics plugin page!
+        </OutboundLink>
         <Helmet title="Madufor Chiemeka — Portfolio" />
         <HeroSection />
         <AboutMe />
