@@ -1,3 +1,4 @@
+language: "react",
 node_js:
   - "stable"
 deploy:
