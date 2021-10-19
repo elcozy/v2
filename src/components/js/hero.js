@@ -39,12 +39,17 @@ const Hero = styled.section`
   }
   .big-heading {
     margin: 0px;
-    font-size: clamp(27px, 5vw, 82px);
+    font-size: clamp(27px, 5.2vw, 82px);
     font-weight: 600;
-    color: var(--lightest-slate);
+    color: #eeece6;
+    /* color: var(--lightest-slate); */
     line-height: 1.1;
   }
-  h3.big-heading {
+  h3.medium-heading {
+    margin: 0px;
+    font-size: clamp(24px, 4.2vw, 75px);
+    font-weight: 600;
+    line-height: 1.1;
     color: var(--slate);
   }
   p {
@@ -86,22 +91,16 @@ const HeroSection = () => {
           </h2>
         </div>
         <div>
-          <h3 class="big-heading">I build stuffs on the web.</h3>
+          <h3 class="medium-heading">Frontend Web Developer.</h3>
         </div>
         <div>
           <p>
-            I am a frontend developer with focus on user-friendly responsive
-            websites and web applications.
+            I build websites with focus on user-friendly responsive websites and
+            web applications.
           </p>
         </div>
         <div>
-          <ButtonAnchor
-            as="a"
-            className="contact-me"
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <ButtonAnchor as="a" className="contact-me" href="#" rel="noreferrer">
             Contact Me
           </ButtonAnchor>
         </div>

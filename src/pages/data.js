@@ -1,3 +1,19 @@
+const size = {
+  mobile: "576px",
+  mobileL: "768px",
+  tablet: "992px",
+  desktop: "1080px",
+  desktopL: "1440px",
+};
+
+export const device = {
+  mobile: `(max-width: ${size.mobile})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktopL})`,
+};
+
 export const portfolioLinks = [
   {
     rank: 1,
