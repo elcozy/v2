@@ -1,18 +1,20 @@
-language: "react",
+language: node_js
+
 node_js:
   - "stable"
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local_dir: public
-  keep-history: true
-  on:
-    branch: gh-pages
+  - "lts/*"
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+  - node_modules
+
 before_script:
-  - "npm i -g gatsby"
-  - "npm i"
+  - "npm i -g gatsby-cli"
+  - "yarn"
+
 script:
-  - "npm run test"
-after_success:
-  - "npm run deploy"
+  - gatsby build
