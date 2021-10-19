@@ -58,7 +58,7 @@ const Footer = () => {
         <ul class="social__StyledSocialList-anu6nt-0 dVLQAC fade-enter-done">
           <li>
             <a
-              href="https://github.com/bchiang7"
+              href="https://github.com/"
               aria-label="GitHub"
               target="_blank"
               rel="noreferrer"
@@ -81,7 +81,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/bchiang7"
+              href="https://www.instagram.com/"
               aria-label="Instagram"
               target="_blank"
               rel="noreferrer"
@@ -106,7 +106,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://twitter.com/bchiang7"
+              href="https://twitter.com/"
               aria-label="Twitter"
               target="_blank"
               rel="noreferrer"
@@ -129,7 +129,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/bchiang7"
+              href="https://www.linkedin.com/in/"
               aria-label="Linkedin"
               target="_blank"
               rel="noreferrer"
@@ -154,7 +154,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://codepen.io/bchiang7"
+              href="https://codepen.io/"
               aria-label="Codepen"
               target="_blank"
               rel="noreferrer"
