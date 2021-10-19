@@ -258,7 +258,7 @@ const Project = styled.div.attrs((props) => props)`
     margin: 0px;
   }
 `;
-// markup
+
 const IndexPage = () => {
   return (
     <>
