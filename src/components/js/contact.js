@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { device } from "../../pages/data";
+import { device } from "../data";
 
 // sizes
 const { mobile, mobileL, tablet, desktop } = device;

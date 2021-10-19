@@ -2,12 +2,12 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import "../components/css/user-stylesheet.css";
-import { portfolioLinks } from "./data";
+import { portfolioLinks } from "../components/data";
 import HeroSection from "../components/js/hero";
 import AboutMe from "../components/js/aboutme";
 import Contact from "../components/js/contact";
 import Footer from "../components/js/footer";
-import { device } from "./data";
+import { device } from "../components/data";
 
 const { mobile, mobileL, tablet, desktop } = device;
 
