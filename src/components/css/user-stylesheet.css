@@ -9,9 +9,8 @@ body {
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
     background-color: var(--navy);
-    color: var(--slate);
+    color: var(--lightest-slate);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     font-size: 1.6rem;

@@ -80,32 +80,35 @@ const ButtonAnchor = styled.button`
 // markup
 const HeroSection = () => {
   return (
-    <div>
-      <Hero>
-        <div>
-          <h5>Hi👋, my name is</h5>
-        </div>
-        <div>
-          <h2 class="big-heading">
-            Madufor <span>Chiemeka</span>.
-          </h2>
-        </div>
-        <div>
-          <h3 class="medium-heading">Frontend Web Developer.</h3>
-        </div>
-        <div>
-          <p>
-            I build websites with focus on user-friendly responsive websites and
-            web applications.
-          </p>
-        </div>
-        <div>
-          <ButtonAnchor as="a" className="contact-me" href="#" rel="noreferrer">
-            Contact Me
-          </ButtonAnchor>
-        </div>
-      </Hero>
-    </div>
+    <Hero>
+      <div>
+        <h5>Hi👋, my name is</h5>
+      </div>
+      <div>
+        <h2 className="big-heading">
+          Madufor <span>Chiemeka</span>.
+        </h2>
+      </div>
+      <div>
+        <h3 className="medium-heading">Frontend Web Developer.</h3>
+      </div>
+      <div>
+        <p>
+          I build websites with focus on user-friendly responsive websites and
+          web applications.
+        </p>
+      </div>
+      <div>
+        <ButtonAnchor
+          as="a"
+          className="contact-me"
+          href="#contact-me"
+          rel="noreferrer"
+        >
+          Contact Me
+        </ButtonAnchor>
+      </div>
+    </Hero>
   );
 };
 

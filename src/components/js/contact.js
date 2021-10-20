@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import { device } from "../data";
+import { useForm, ValidationError } from "@formspree/react";
 
 // sizes
-const { mobile, mobileL, tablet, desktop } = device;
+const { mobile, mobileL, tablet } = device;
 
 // styles
 
@@ -87,27 +88,119 @@ const ContactTag = styled.section`
     }
   }
 `;
+const ContactBody = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  .form-c {
+    flex: 1 0 auto;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+  }
+`;
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .input-c {
+    width: 100%;
+    position: relative;
+    margin: 0.2rem 0;
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      background: transparent;
+      caret-color: var(--slate);
+      border: 1px solid var(--green);
+      color: var(--slate);
+      transition: border 500ms;
+      padding: 1.75rem 1rem 0.5rem;
+      font-size: 1.15rem;
+    }
+    textarea {
+      height: 220px;
+      resize: none;
+      font: inherit;
+    }
+  }
+`;
+
+const ButtonAnchor = styled.button`
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  padding: 1.25rem 1.75rem;
+  width: -webkit-fill-available;
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 20px;
+  &:hover {
+    color: var(--navy);
+    background-color: var(--green);
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+`;
 
 // markup
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xoqkpjqe");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <ContactTag>
       <HeaderStyles>Contact 📧</HeaderStyles>
       <SubHeaderStyles>Get In Touch 📧</SubHeaderStyles>
 
-      <div>
-        <div>
-          <div>
-            <HeaderStyles>Email 📧</HeaderStyles>
-            <p>maduforchiemeka@gmail.com</p>
-
-            <p>
-              Here are a few languages/libraries I’ve been working with of
-              recent:
-            </p>
-          </div>
+      <ContactBody>
+        <div className="form-c" id="contact-me">
+          {/* <HeaderStyles>Email 📧</HeaderStyles> */}
+          {/* <p>maduforchiemeka@gmail.com</p> */}
+          <Form onSubmit={handleSubmit}>
+            <div className="input-c">
+              <input id="name" type="text" name="name" placeholder="Name" />
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors}
+              />
+            </div>
+            <div className="input-c">
+              <input id="email" type="email" name="email" placeholder="Email" />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+            </div>
+            <div className="input-c">
+              <textarea id="message" name="message" placeholder="Message" />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <small>500 characters left</small>
+            </div>
+            <ButtonAnchor type="submit" disabled={state.submitting}>
+              Submit
+            </ButtonAnchor>
+          </Form>
         </div>
-      </div>
+      </ContactBody>
     </ContactTag>
   );
 };

@@ -1,53 +1,15 @@
 import * as React from "react";
 import styled from "styled-components";
-// sizes
-const size = {
-  mobile: "576px",
-  mobileL: "768px",
-  tablet: "992px",
-  desktop: "1080px",
-  desktopL: "1440px",
-};
+import { device } from "../data";
 
-const device = {
-  mobile: `(max-width: ${size.mobile})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktopL})`,
-};
-
-const { mobile, mobileL, tablet, desktop } = device;
+const { mobile, mobileL, tablet } = device;
 
 // styles
-const PageStyles = styled.main`
-  padding: 0px 150px;
-
-  font-family: -apple-system, Roboto, sans-serif, serif;
-  margin: 0px auto;
-  /* width: 100%; */
-  max-width: 1600px;
-  min-height: 100vh;
-  @media ${tablet} {
-    padding: 0px 100px;
-  }
-  @media ${mobileL} {
-    padding: 0px 50px;
-  }
-  @media ${mobile} {
-    padding: 0px 25px;
-  }
-`;
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
 
 const HeaderStyles = styled.h5`
   display: flex;
   align-items: center;
   position: relative;
-  /* margin: 10px 0px 40px; */
   margin: 10px 0;
   width: 100%;
   font-size: clamp(26px, 5vw, var(--fz-heading));
@@ -85,7 +47,6 @@ const SubHeaderStyles = styled.h2`
   font-size: 3.3rem;
   text-transform: capitalize;
   color: var(--lightest-slate);
-  /* letter-spacing: 3px; */
 `;
 
 const AboutMeTag = styled.section`
@@ -167,7 +128,7 @@ const AboutMe = () => {
               recent:
             </p>
           </div>
-          <ul class="skill-tags">
+          <ul className="skill-tags">
             <li>JavaScript</li>
             <li>ReactJS</li>
             <li>NextJS</li>
@@ -183,8 +144,8 @@ const AboutMe = () => {
             <li>Figma</li>
           </ul>
         </div>
-        <div class="">
-          <div class="wrapper">
+        <div className="">
+          <div className="wrapper">
             <div>
               <div>
                 <img alt="" role="presentation" aria-hidden="true" src="" />
