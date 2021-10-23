@@ -13,8 +13,31 @@ const { mobile, mobileL, tablet } = device;
 
 // styles
 const PageStyles = styled.main`
+  @mixin rainbow() {
+    background: repeating-linear-gradient(
+      -45deg,
+      red 0%,
+      yellow 7.14%,
+      rgb(0, 255, 0) 14.28%,
+      rgb(0, 255, 255) 21.42%,
+      cyan 28.56%,
+      blue 35.7%,
+      magenta 42.84%,
+      red 50%
+    );
+    background-size: 600vw 600vw;
+    -webkit-animation: "slide" 10s infinite linear forwards;
+  }
+  @keyframes slide {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: 600vw;
+    }
+  }
   padding: 0px 150px;
-  font-family: -apple-system, Roboto, sans-serif, serif;
+  font-family: var(--font-main);
   margin: 0px auto;
   max-width: 1600px;
   min-height: 100vh;
@@ -228,7 +251,7 @@ const Project = styled.div.attrs((props) => props)`
         list-style: none;
         text-transform: uppercase;
         li {
-          font-family: var(--font-mono);
+          font-family: var(--font-code);
           font-size: var(--text-xxs);
           line-height: 1.75;
           &:not(:last-of-type) {
@@ -246,6 +269,10 @@ const Project = styled.div.attrs((props) => props)`
 
 const IndexPage = () => {
   const [displayMode, setDisplayMode] = React.useState("dark");
+
+  const bgSwitch = () => {
+    displayMode === "dark" ? setDisplayMode("light") : setDisplayMode("dark");
+  };
   return (
     <>
       <PageStyles>
@@ -255,15 +282,7 @@ const IndexPage = () => {
             class: displayMode,
           }}
         />
-        <button
-          onClick={() =>
-            displayMode === "dark"
-              ? setDisplayMode("light")
-              : setDisplayMode("dark")
-          }
-        >
-          Switch Display Mode
-        </button>
+        <button onClick={bgSwitch}>Switch Display Mode</button>
         <HeroSection />
         <AboutMe />
         <Projects>

@@ -75,7 +75,7 @@ const ContactTag = styled.section`
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
-      font-family: var(--font-mono);
+      font-family: var(--font-code);
       font-size: var(--text-xs);
       &::before {
         content: "▷";
@@ -150,7 +150,7 @@ const ButtonAnchor = styled.button`
   padding: 1.25rem 1.75rem;
   /* width: -webkit-fill-available; */
   font-size: var(--text-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;

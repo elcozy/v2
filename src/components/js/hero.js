@@ -33,7 +33,7 @@ const Hero = styled.section`
   h5 {
     margin: 0px 0px 30px 4px;
     color: var(--white);
-    font-family: var(--font-mono);
+    font-family: var(--font-code);
     font-size: clamp(var(--text-sm), 5vw, var(--text-md));
     font-weight: 400;
   }
@@ -64,7 +64,7 @@ const ButtonAnchor = styled.button`
   border-radius: var(--border-radius);
   padding: 1.25rem 1.75rem;
   font-size: var(--text-sm);
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;

@@ -75,7 +75,7 @@ const AboutMeTag = styled.section`
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
-      font-family: var(--font-mono);
+      font-family: var(--font-code);
       font-size: var(--text-xs);
       &::before {
         content: "•";

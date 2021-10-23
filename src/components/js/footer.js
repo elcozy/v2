@@ -9,7 +9,8 @@ const { mobile, mobileL, tablet } = device;
 const PageStyles = styled.main`
   padding: 30px 150px;
   background-color: var(--light-bg);
-  font-family: -apple-system, Roboto, sans-serif, serif;
+  font-family: var(--font-main);
+
   margin: 0px auto;
   /* width: 100%; */
   max-width: 1600px;

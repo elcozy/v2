@@ -42,10 +42,10 @@ p > a {
 
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 :root {
-    --font-sans: Calibre-Regular,sans-serif;
-    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --font-main: 'Inter',sans-serif;
+    --font-code: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     --text-xxs: 12px;
     --text-xs: 13px;
     --text-sm: 14px;
