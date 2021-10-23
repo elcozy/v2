@@ -1,7 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import { device } from "../data";
-
 // styles
 
 const NavTag = styled.div`
@@ -194,6 +192,12 @@ const NavTag = styled.div`
 
 // markup
 const Nav = () => {
+  const [closeNav, setCloseNav] = React.useState(true);
+  let closeRef = React.useRef(null);
+  const navClose = () => {
+    closeRef.current.checked = false;
+  };
+
   return (
     <NavTag>
       <div className="design">
@@ -201,8 +205,9 @@ const Nav = () => {
           id="page-nav-toggle"
           className="main-navigation-toggle"
           type="checkbox"
+          ref={closeRef}
         />
-        <label for="page-nav-toggle">
+        <label htmlFor="page-nav-toggle">
           <svg className="icon--menu-toggle" viewBox="0 0 60 30">
             <g className="icon-group">
               <g className="icon--menu">
@@ -221,16 +226,24 @@ const Nav = () => {
         <nav className="main-navigation">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#" onClick={navClose}>
+                Home
+              </a>
             </li>
             <li>
-              <a href="#">About Me</a>
+              <a href="#about-me" onClick={navClose}>
+                About Me
+              </a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#projects" onClick={navClose}>
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact" onClick={navClose}>
+                Contact
+              </a>
             </li>
           </ul>
         </nav>

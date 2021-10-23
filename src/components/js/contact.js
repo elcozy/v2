@@ -47,7 +47,7 @@ const SubHeaderStyles = styled.h2`
   margin: 10px 0;
   width: 100%;
   white-space: nowrap;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   text-transform: capitalize;
   color: var(--lightest-slate);
   /* letter-spacing: 3px; */
@@ -173,10 +173,9 @@ const Contact = () => {
     return <p>Submitted Successfully</p>;
   }
   return (
-    <ContactTag>
+    <ContactTag id="contact">
       <HeaderStyles>Contact</HeaderStyles>
       <SubHeaderStyles>Get In Touch 📧</SubHeaderStyles>
-
       <ContactBody>
         <div className="form-c" id="contact-me">
           <Form onSubmit={handleSubmit}>

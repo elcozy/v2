@@ -71,7 +71,7 @@ const ButtonAnchor = styled.button`
 // markup
 const HeroSection = () => {
   return (
-    <Hero>
+    <Hero id="#">
       <div>
         <h5>Hi👋, I'm</h5>
       </div>

@@ -44,7 +44,7 @@ const SubHeaderStyles = styled.h2`
   margin: 10px 0;
   width: 100%;
   white-space: nowrap;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   text-transform: capitalize;
   color: var(--lightest-slate);
 `;
@@ -94,7 +94,7 @@ const AboutMeTag = styled.section`
 // markup
 const AboutMe = () => {
   return (
-    <AboutMeTag>
+    <AboutMeTag id="about-me">
       <HeaderStyles>About Me</HeaderStyles>
       <SubHeaderStyles>A little About Me 🙂</SubHeaderStyles>
 

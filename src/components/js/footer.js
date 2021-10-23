@@ -187,7 +187,11 @@ const Footer = () => {
           </div>
         </div>
         <footer>
-          <div className="name">© 2021 Madufor Chiemeka</div>
+          <div className="name">
+            <a href="https://github.com/elcozy" target="_blank">
+              © 2021 Madufor Chiemeka
+            </a>
+          </div>
         </footer>
       </FooterTag>
     </PageStyles>
