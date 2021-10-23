@@ -8,34 +8,12 @@ import AboutMe from "../components/js/aboutme";
 import Contact from "../components/js/contact";
 import Footer from "../components/js/footer";
 import { device } from "../components/data";
+import Nav from "../components/js/nav";
 
 const { mobile, mobileL, tablet } = device;
 
 // styles
 const PageStyles = styled.main`
-  @mixin rainbow() {
-    background: repeating-linear-gradient(
-      -45deg,
-      red 0%,
-      yellow 7.14%,
-      rgb(0, 255, 0) 14.28%,
-      rgb(0, 255, 255) 21.42%,
-      cyan 28.56%,
-      blue 35.7%,
-      magenta 42.84%,
-      red 50%
-    );
-    background-size: 600vw 600vw;
-    -webkit-animation: "slide" 10s infinite linear forwards;
-  }
-  @keyframes slide {
-    0% {
-      background-position-x: 0%;
-    }
-    100% {
-      background-position-x: 600vw;
-    }
-  }
   padding: 0px 150px;
   font-family: var(--font-main);
   margin: 0px auto;
@@ -49,6 +27,106 @@ const PageStyles = styled.main`
   }
   @media ${mobile} {
     padding: 0px 25px;
+  }
+`;
+
+const FormField = styled.div`
+  width: fit-content;
+  position: absolute;
+  top: calc(var(--space) * 1.5);
+  left: calc(var(--space) * 2);
+
+  form {
+    background: var(--main-bg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+    .toggle {
+      &:before {
+        background: var(--main-bg);
+        position: absolute;
+        transition: transform var(--dur);
+        transition-timing-function: ease-out;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        top: 0.25em;
+        left: 0.25em;
+        width: 1em;
+        height: 1em;
+        transition-delay: 0s;
+        transform: translateX(-1.5em);
+      }
+      &:after {
+        background: var(--main-bg);
+        position: absolute;
+        transition: transform var(--dur);
+        border-radius: 50%;
+        content: "";
+        display: block;
+        top: 0.25em;
+        left: 0.25em;
+        width: 1em;
+        height: 1em;
+        transition-delay: calc(var(--dur) * 0.75);
+        transition-timing-function: cubic-bezier(0.3, 1.6, 0.5, 0.7);
+      }
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-inv);
+      border-radius: 0.75em;
+      cursor: pointer;
+      width: 3em;
+      height: 1.5em;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      &:checked {
+        &:after {
+          transition-timing-function: ease-out;
+          transition-delay: 0s;
+          transform: translateX(3em);
+        }
+        &:before {
+          transition-delay: calc(var(--dur) * 0.75);
+          transition-timing-function: cubic-bezier(0.3, 1.6, 0.5, 0.7);
+          transform: translateX(1.5em);
+        }
+        ~ {
+          .curtain {
+            transform: scaleX(1);
+          }
+        }
+      }
+      &:focus {
+        outline: transparent;
+      }
+    }
+    .curtain {
+      position: absolute;
+      transition: transform var(--dur);
+      transition-timing-function: ease-out;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+    }
+    .sr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      color: transparent;
+      width: 1px;
+      height: 1px;
+    }
   }
 `;
 
@@ -135,8 +213,7 @@ const Project = styled.div.attrs((props) => props)`
   display: flex;
   min-height: 30rem;
   border: 1px solid var(--black);
-  z-index: 0;
-  z-index: 5;
+
   transition: 0.5s;
   position: relative;
   cursor: default;
@@ -167,7 +244,7 @@ const Project = styled.div.attrs((props) => props)`
   }
 
   .project-card {
-    z-index: 5;
+    /* z-index: 5; */
     padding: 1rem;
     box-shadow: 0 10px 20px -15px var(--main-bg-shadow);
     display: flex;
@@ -189,7 +266,7 @@ const Project = styled.div.attrs((props) => props)`
         align-items: center;
         color: var(--light-tc);
         a {
-          z-index: 50;
+          /* z-index: 50; */
           cursor: pointer;
           display: flex;
           justify-content: center;
@@ -213,7 +290,7 @@ const Project = styled.div.attrs((props) => props)`
 
       a {
         position: relative;
-        z-index: 1;
+        /* z-index: 1; */
       }
       .project-title {
         margin: 0px 0px 10px;
@@ -269,9 +346,9 @@ const Project = styled.div.attrs((props) => props)`
 
 const IndexPage = () => {
   const [displayMode, setDisplayMode] = React.useState("dark");
-
   const bgSwitch = () => {
     displayMode === "dark" ? setDisplayMode("light") : setDisplayMode("dark");
+    console.log("bg changed");
   };
   return (
     <>
@@ -282,8 +359,28 @@ const IndexPage = () => {
             class: displayMode,
           }}
         />
-        <button onClick={bgSwitch}>Switch Display Mode</button>
+        <FormField>
+          <form>
+            <input
+              id="light-mode"
+              className="toggle"
+              type="checkbox"
+              name="Light mode"
+              role="switch"
+              value="on"
+              onClick={() => bgSwitch()}
+            />
+            <label htmlFor="light-mode" className="sr">
+              Light Mode
+            </label>
+            <div className="curtain"></div>
+          </form>
+        </FormField>
+        {/* <button onClick={() => bgSwitch()}>Switch Display Mode</button> */}
         <HeroSection />
+      </PageStyles>
+      <Nav />
+      <PageStyles>
         <AboutMe />
         <Projects>
           <HeaderStyles>Projects</HeaderStyles>

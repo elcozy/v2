@@ -1,23 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-// sizes
-const size = {
-  mobile: "576px",
-  mobileL: "768px",
-  tablet: "992px",
-  desktop: "1080px",
-  desktopL: "1440px",
-};
+import { device } from "../data";
 
-const device = {
-  mobile: `(max-width: ${size.mobile})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktopL})`,
-};
-
-const { mobile, mobileL, tablet, desktop } = device;
+const { mobile } = device;
 
 // styles
 const Hero = styled.section`
@@ -46,10 +31,17 @@ const Hero = styled.section`
   }
   h3.medium-heading {
     margin: 0px;
-    font-size: clamp(24px, 4.2vw, 75px);
+    font-size: clamp(25px, 4.3vw, 77px);
     font-weight: 600;
     line-height: 1.1;
-    color: var(--slate);
+
+    -webkit-text-stroke: 1.5px var(--slate);
+    color: transparent;
+
+    @media ${mobile} {
+      color: var(--slate);
+      -webkit-text-stroke: 0px transparent;
+    }
   }
   p {
     margin: 20px 0px 0px;
