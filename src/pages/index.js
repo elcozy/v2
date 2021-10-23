@@ -346,12 +346,18 @@ const Project = styled.div.attrs((props) => props)`
 
 const IndexPage = () => {
   const [displayMode, setDisplayMode] = React.useState("dark");
+  const [transit, setTransit] = React.useState("enter-");
+
   const bgSwitch = () => {
     displayMode === "dark" ? setDisplayMode("light") : setDisplayMode("dark");
+    setTransit("enter-active");
+    setTimeout(() => {
+      setTransit("enter-done");
+    }, 250);
     console.log("bg changed");
   };
   return (
-    <>
+    <div className={transit}>
       <PageStyles>
         <Helmet
           title="Madufor Chiemeka — Portfolio"
@@ -496,7 +502,7 @@ const IndexPage = () => {
         <Contact />
       </PageStyles>
       <Footer />
-    </>
+    </div>
   );
 };
 
