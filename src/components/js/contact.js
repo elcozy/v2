@@ -28,7 +28,7 @@ const HeaderStyles = styled.h5`
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: var(--lightest-navy);
+    background-color: var(--lightest-bg);
 
     @media ${tablet} {
       max-width: 100px;
@@ -81,7 +81,7 @@ const ContactTag = styled.section`
         content: "▷";
         position: absolute;
         left: 0px;
-        color: var(--green);
+        color: var(--white);
         font-size: var(--text-sm);
         line-height: inherit;
       }
@@ -144,7 +144,7 @@ const Form = styled.form`
 `;
 
 const ButtonAnchor = styled.button`
-  color: var(--green);
+  color: var(--white);
   background-color: transparent;
   border: 1px solid var(--slate);
   padding: 1.25rem 1.75rem;
@@ -158,7 +158,7 @@ const ButtonAnchor = styled.button`
   margin-top: 0.2rem;
   &:hover {
     color: var(--main-bg);
-    background-color: var(--green);
+    background-color: var(--white);
   }
   &:disabled {
     opacity: 0.6;
@@ -174,7 +174,7 @@ const Contact = () => {
   }
   return (
     <ContactTag>
-      <HeaderStyles>Contact 📧</HeaderStyles>
+      <HeaderStyles>Contact</HeaderStyles>
       <SubHeaderStyles>Get In Touch 📧</SubHeaderStyles>
 
       <ContactBody>

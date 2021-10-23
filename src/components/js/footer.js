@@ -8,7 +8,7 @@ const { mobile, mobileL, tablet } = device;
 // styles
 const PageStyles = styled.main`
   padding: 30px 150px;
-  background-color: var(--primary);
+  background-color: var(--light-bg);
   font-family: -apple-system, Roboto, sans-serif, serif;
   margin: 0px auto;
   /* width: 100%; */
@@ -30,13 +30,12 @@ const FooterTag = styled.section`
   padding: 1rem 0;
   align-items: center;
   width: 100%;
+  @media ${mobile} {
+    flex-direction: column;
+    gap: 10px;
+  }
   .others-c {
-    /* width: 100%; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
     display: flex;
-    /* margin-top: 2rem; */
-    /* margin-bottom: 5rem; */
     gap: 2rem;
     .social-container {
       position: relative;
@@ -45,7 +44,7 @@ const FooterTag = styled.section`
       &:hover {
         a {
           svg {
-            color: var(--navy);
+            color: var(--bg);
           }
         }
       }

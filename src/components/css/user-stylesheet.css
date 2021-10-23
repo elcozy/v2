@@ -34,47 +34,16 @@ a {
 
 p > a {
     display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--green);
+    color: var(--white);
+    text-decoration: wavy;
+    text-decoration-line: underline;
+
 }
 
 
 :root {
-
-    --main-bg: #0a192f;
-    --main-bg: #020a13;
-    --invert: 1;
-    --light-navy: #040e1a;
-    --lightest-navy: #202124;
-    --main-bg-shadow: rgba(32, 33, 36, 0.7);
-    --primary: #080f17;
-    --black: #000;
-    --slate: #434343;
-    --slate: #9aa0a6;
-    --light-slate: #e1e1e1; 
-    --lightest-slate: #bbbbbb; 
-
-
-    /* --main-bg: #0a192f;
-    --primary: #020c1b;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
-    --main-bg-shadow: rgba(2,12,27,0.7);
-    --primary: #010a19;
-    --black: #000;
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6; */
-    
-
-    --white: #e6f1ff;
-    --green: #fff;
-    --green-tint: rgba(100,255,218,0.1);
-    --pink: #f57dff;
-    --blue: #57cbff;
     --font-sans: Calibre-Regular,sans-serif;
     --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     --text-xxs: 12px;
@@ -87,3 +56,31 @@ p > a {
     --text-heading: 32px;
     --border-radius: 8px;
 }
+
+:root.dark{
+    --main-bg: #01070d;
+    --light-bg: #020a13;
+    --lightest-bg: #202124;
+    --main-bg-shadow: rgba(1, 7, 13, 0.7);
+    --primary: #07111d;
+    --black: var(--black);
+    --slate: #9aa0a6;
+    --text-c: #c6c6c6;
+    --light-tc: #e1e1e1; 
+    --lightest-slate: #bbbbbb; 
+    --white: #e6f1ff;  
+}
+:root.light{
+    --main-bg: #fdfdfd;
+    --light-bg: #fff;
+    --lightest-bg: #202124;
+    --main-bg-shadow: rgba(255, 255, 255, 0.7);
+    --primary: #f1efef;
+    --black: var(--black);
+    --slate: #000;
+    --text-c: #2f2f2f;
+    --light-tc: #464646; 
+    --lightest-slate: #000; 
+    --white: rgb(41, 41, 41);  
+}
+

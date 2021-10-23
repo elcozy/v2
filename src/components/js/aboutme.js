@@ -25,7 +25,7 @@ const HeaderStyles = styled.h5`
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: var(--lightest-navy);
+    background-color: var(--primary);
 
     @media ${tablet} {
       max-width: 100px;
@@ -83,7 +83,7 @@ const AboutMeTag = styled.section`
         /* content: "▷"; */
         position: absolute;
         left: 0px;
-        color: var(--green);
+        color: var(--white);
         font-size: var(--text-sm);
         line-height: inherit;
       }

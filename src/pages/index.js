@@ -14,7 +14,6 @@ const { mobile, mobileL, tablet } = device;
 // styles
 const PageStyles = styled.main`
   padding: 0px 150px;
-
   font-family: -apple-system, Roboto, sans-serif, serif;
   margin: 0px auto;
   max-width: 1600px;
@@ -34,7 +33,6 @@ const HeaderStyles = styled.h5`
   display: flex;
   align-items: center;
   position: relative;
-  /* margin: 10px 0px 40px; */
   margin: 10px 0;
   width: 100%;
   font-size: clamp(26px, 5vw, var(--text-heading));
@@ -50,8 +48,7 @@ const HeaderStyles = styled.h5`
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: var(--lightest-navy);
-
+    background-color: var(--primary);
     @media ${tablet} {
       max-width: 100px;
       width: 100%;
@@ -108,13 +105,13 @@ const badgeStyle = {
 };
 
 const Project = styled.div.attrs((props) => props)`
-  background: var(--light-navy);
+  background: var(--light-bg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2rem 1.75rem;
   display: flex;
   min-height: 30rem;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   z-index: 0;
   z-index: 5;
   transition: 0.5s;
@@ -128,7 +125,7 @@ const Project = styled.div.attrs((props) => props)`
     left: 10px;
     right: 10px;
     bottom: 10px;
-    border: 1px solid var(--lightest-navy);
+    border: 1px solid var(--lightest-bg);
     opacity: 1;
     visibility: visible;
     z-index: -1;
@@ -139,7 +136,7 @@ const Project = styled.div.attrs((props) => props)`
     transform: translateY(-5px);
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
     &::before {
-      border-color: var(--green);
+      border-color: var(--white);
     }
     .project-card {
       background-color: transparent;
@@ -157,7 +154,7 @@ const Project = styled.div.attrs((props) => props)`
     position: relative;
     height: inherit;
     border-radius: var(--border-radius);
-    background-color: var(--light-navy);
+    background-color: var(--light-bg);
     transition: var(--transition);
     .heading {
       width: 100%;
@@ -167,7 +164,7 @@ const Project = styled.div.attrs((props) => props)`
         justify-content: space-between;
         display: flex;
         align-items: center;
-        color: var(--light-slate);
+        color: var(--light-tc);
         a {
           z-index: 50;
           cursor: pointer;
@@ -216,7 +213,7 @@ const Project = styled.div.attrs((props) => props)`
       }
 
       .project-description {
-        color: var(--light-slate);
+        color: var(--light-tc);
         font-size: var(--text-sm);
       }
     }
@@ -248,10 +245,25 @@ const Project = styled.div.attrs((props) => props)`
 `;
 
 const IndexPage = () => {
+  const [displayMode, setDisplayMode] = React.useState("dark");
   return (
     <>
       <PageStyles>
-        <Helmet title="Madufor Chiemeka — Portfolio" />
+        <Helmet
+          title="Madufor Chiemeka — Portfolio"
+          htmlAttributes={{
+            class: displayMode,
+          }}
+        />
+        <button
+          onClick={() =>
+            displayMode === "dark"
+              ? setDisplayMode("light")
+              : setDisplayMode("dark")
+          }
+        >
+          Switch Display Mode
+        </button>
         <HeroSection />
         <AboutMe />
         <Projects>

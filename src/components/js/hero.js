@@ -32,7 +32,7 @@ const Hero = styled.section`
 
   h5 {
     margin: 0px 0px 30px 4px;
-    color: var(--green);
+    color: var(--white);
     font-family: var(--font-mono);
     font-size: clamp(var(--text-sm), 5vw, var(--text-md));
     font-weight: 400;
@@ -41,8 +41,7 @@ const Hero = styled.section`
     margin: 0px;
     font-size: clamp(27px, 5.2vw, 82px);
     font-weight: 600;
-    color: var(--light-slate);
-    /* color: var(--lightest-slate); */
+    color: var(--light-tc);
     line-height: 1.1;
   }
   h3.medium-heading {
@@ -59,9 +58,9 @@ const Hero = styled.section`
 `;
 
 const ButtonAnchor = styled.button`
-  color: var(--green);
+  color: var(--white);
   background-color: transparent;
-  border: 1px solid var(--green);
+  border: 1px solid var(--white);
   border-radius: var(--border-radius);
   padding: 1.25rem 1.75rem;
   font-size: var(--text-sm);
@@ -73,7 +72,7 @@ const ButtonAnchor = styled.button`
   margin-top: 50px;
   &:hover {
     color: var(--main-bg);
-    background-color: var(--green);
+    background-color: var(--white);
   }
 `;
 
@@ -82,7 +81,7 @@ const HeroSection = () => {
   return (
     <Hero>
       <div>
-        <h5>Hi👋, my name is</h5>
+        <h5>Hi👋, I'm</h5>
       </div>
       <div>
         <h2 className="big-heading">
