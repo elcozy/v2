@@ -188,7 +188,11 @@ const Footer = () => {
         </div>
         <footer>
           <div className="name">
-            <a href="https://github.com/elcozy" target="_blank">
+            <a
+              href="https://github.com/elcozy"
+              target="_blank"
+              rel="noreferrer"
+            >
               © 2021 Madufor Chiemeka
             </a>
           </div>

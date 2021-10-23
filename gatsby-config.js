@@ -7,7 +7,7 @@ module.exports = {
     FUNCTIONS: true,
   },
   siteMetadata: {
-    siteUrl: "https://elcozy.github.io/p-v2/d",
+    siteUrl: "https://elcozy.github.io",
     title: "portfolio-v2",
   },
   pathPrefix: "/p-v2",

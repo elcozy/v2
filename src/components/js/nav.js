@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 // styles
 
 const NavTag = styled.div`
@@ -225,24 +226,24 @@ const Nav = () => {
         <nav className="main-navigation">
           <ul>
             <li>
-              <a href="#" onClick={navClose}>
+              <Link to="/#" onClick={navClose}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about-me" onClick={navClose}>
+              <Link to="#about-me" onClick={navClose}>
                 About Me
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" onClick={navClose}>
+              <Link to="#projects" onClick={navClose}>
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" onClick={navClose}>
+              <Link to="#contact" onClick={navClose}>
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
