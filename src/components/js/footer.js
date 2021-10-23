@@ -7,8 +7,8 @@ const { mobile, mobileL, tablet } = device;
 
 // styles
 const PageStyles = styled.main`
-  padding: 100px 150px 50px;
-  background-color: var(--dark-navy);
+  padding: 30px 150px;
+  background-color: var(--primary);
   font-family: -apple-system, Roboto, sans-serif, serif;
   margin: 0px auto;
   /* width: 100%; */
@@ -23,29 +23,26 @@ const PageStyles = styled.main`
     padding: 0px 25px;
   }
 `;
-// styles
-
 const FooterTag = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   padding: 1rem 0;
   align-items: center;
   width: 100%;
   .others-c {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    /* width: 100%; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
+    display: flex;
+    /* margin-top: 2rem; */
+    /* margin-bottom: 5rem; */
     gap: 2rem;
     .social-container {
+      position: relative;
       padding: 2rem 1rem;
-      border-width: 1px;
-      border-style: solid;
-      border-image: initial;
+      border: 0;
       &:hover {
-        background: var(--slate);
         a {
           svg {
             color: var(--navy);
@@ -67,13 +64,21 @@ const FooterTag = styled.section`
           width: 22px;
           color: var(--slate);
         }
+        &:after {
+          content: "";
+          position: absolute;
+          top: -2rem;
+          left: -1rem;
+          height: calc(100% + 4rem);
+          width: calc(100% + 2rem);
+        }
       }
     }
 
     flex: 1 0;
   }
   footer {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
 
@@ -97,30 +102,11 @@ const Footer = () => {
               aria-label="Linkedin"
               rel="noreferrer"
             >
-              {/* <svg
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-linkedin"
-              >
-                <title>LinkedIn</title>
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg> */}
-
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                // strokeLinecap="round"
-                // strokeLinejoin="round"
                 className="feather feather-linkedin"
               >
                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />

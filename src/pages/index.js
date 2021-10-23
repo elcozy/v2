@@ -8,7 +8,6 @@ import AboutMe from "../components/js/aboutme";
 import Contact from "../components/js/contact";
 import Footer from "../components/js/footer";
 import { device } from "../components/data";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const { mobile, mobileL, tablet } = device;
 
@@ -18,7 +17,6 @@ const PageStyles = styled.main`
 
   font-family: -apple-system, Roboto, sans-serif, serif;
   margin: 0px auto;
-  /* width: 100%; */
   max-width: 1600px;
   min-height: 100vh;
   @media ${tablet} {
@@ -39,7 +37,7 @@ const HeaderStyles = styled.h5`
   /* margin: 10px 0px 40px; */
   margin: 10px 0;
   width: 100%;
-  font-size: clamp(26px, 5vw, var(--fz-heading));
+  font-size: clamp(26px, 5vw, var(--text-heading));
   white-space: nowrap;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -74,7 +72,6 @@ const SubHeaderStyles = styled.h2`
   font-size: 3.3rem;
   color: var(--lightest-slate);
   text-transform: capitalize;
-  /* letter-spacing: 3px; */
 `;
 
 const Projects = styled.section`
@@ -91,7 +88,7 @@ const ProjectFlex = styled.div`
   width: inherit;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
 `;
 
 const badgeStyle = {
@@ -138,17 +135,13 @@ const Project = styled.div.attrs((props) => props)`
   }
 
   &:hover {
-    /* background: ${(props) =>
-      props.img_src &&
-      `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://elcozy.github.io/img/${props.img_src})`}; */
-    background: var(--dark-navy);
+    background: var(--primary);
     transform: translateY(-5px);
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
     &::before {
       border-color: var(--green);
     }
     .project-card {
-      /* padding: 2rem 1.75rem; */
       background-color: transparent;
     }
   }
@@ -156,8 +149,7 @@ const Project = styled.div.attrs((props) => props)`
   .project-card {
     z-index: 5;
     padding: 1rem;
-    box-shadow: 0 10px 20px -15px var(--navy-shadow);
-    /* box-shadow: 0 10px 30px -15px #020c1bb3; */
+    box-shadow: 0 10px 20px -15px var(--main-bg-shadow);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -169,35 +161,30 @@ const Project = styled.div.attrs((props) => props)`
     transition: var(--transition);
     .heading {
       width: 100%;
-      .project-nav {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        width: 100%;
+      .project-links {
         margin-bottom: 35px;
-
-        .project-links {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        color: var(--light-slate);
+        a {
+          z-index: 50;
+          cursor: pointer;
           display: flex;
+          justify-content: center;
           align-items: center;
-          color: var(--light-slate);
-          a {
-            z-index: 50;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 5px 7px;
-            svg {
-              width: 22px;
-              height: 22px;
+          padding: 5px 7px;
+          svg {
+            width: 22px;
+            height: 22px;
+            &:hover {
+              stroke-width: 3;
+            }
+            &.github {
               &:hover {
-                stroke-width: 3;
-              }
-              &.github {
-                &:hover {
-                  stroke-width: 1;
-                  fill: currentColor;
-                }
+                stroke-width: 1;
+                fill: currentColor;
               }
             }
           }
@@ -211,7 +198,7 @@ const Project = styled.div.attrs((props) => props)`
       .project-title {
         margin: 0px 0px 10px;
         color: var(--lightest-slate);
-        font-size: var(--fz-xl);
+        font-size: var(--text-xl);
         a {
           position: static;
 
@@ -230,7 +217,7 @@ const Project = styled.div.attrs((props) => props)`
 
       .project-description {
         color: var(--light-slate);
-        font-size: var(--fz-sm);
+        font-size: var(--text-sm);
       }
     }
     .bottom {
@@ -245,7 +232,7 @@ const Project = styled.div.attrs((props) => props)`
         text-transform: uppercase;
         li {
           font-family: var(--font-mono);
-          font-size: var(--fz-xxs);
+          font-size: var(--text-xxs);
           line-height: 1.75;
           &:not(:last-of-type) {
             margin-right: 15px;
@@ -264,9 +251,6 @@ const IndexPage = () => {
   return (
     <>
       <PageStyles>
-        <OutboundLink href="https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/">
-          Visit the Google Analytics plugin page!
-        </OutboundLink>
         <Helmet title="Madufor Chiemeka — Portfolio" />
         <HeroSection />
         <AboutMe />
@@ -278,41 +262,44 @@ const IndexPage = () => {
               <Project img_src={link.img_src} key={link.rank}>
                 <div className="project-card">
                   <div className="heading">
-                    <div className="project-nav">
-                      <div className="project-links">
-                        {link.source_code && (
-                          <a
-                            href={link.source_code}
-                            aria-label="Open GitHub Code"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              role="img"
-                              viewBox="0 0 64 64"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="github"
-                            >
-                              <title>GitHub</title>
-                              <desc>A solid styled icon</desc>
-                              <path
-                                data-name="layer1"
-                                d="M32 1.952a30.019 30.019 0 0 0-9.469 58.5c1.5.281 2.063-.656 2.063-1.406v-5.625c-8.344 1.779-10.125-3.563-10.125-3.563-1.406-3.469-3.375-4.406-3.375-4.406-2.719-1.875.187-1.781.187-1.781 3 .188 4.594 3.094 4.594 3.094 2.719 4.594 7.031 3.281 8.719 2.531a6.5 6.5 0 0 1 1.875-4.031c-6.656-.75-13.688-3.375-13.688-14.812a11.5 11.5 0 0 1 3.094-8.063 11.217 11.217 0 0 1 .281-7.969s2.531-.844 8.25 3.094a28.944 28.944 0 0 1 7.5-1.031 28.4 28.4 0 0 1 7.5 1.031c5.719-3.844 8.25-3.094 8.25-3.094a11.217 11.217 0 0 1 .281 7.969 11.34 11.34 0 0 1 3.094 8.063c0 11.531-7.031 14.063-13.688 14.813a7.262 7.262 0 0 1 2.063 5.534v8.25c0 .844.562 1.687 2.063 1.406A30.019 30.019 0 0 0 32 1.952z"
-                                strokeMiterlimit="10"
-                                strokeLinejoin="round"
-                              ></path>
-                            </svg>
-                          </a>
-                        )}
+                    <div className="project-links">
+                      <a
+                        href={link.live_link}
+                        aria-label="Open Project"
+                        className="live"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          role="img"
+                          viewBox="0 0 64 64"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <title>Live Link</title>
+                          <desc>A line styled icon</desc>
+                          <path
+                            data-name="layer2"
+                            strokeMiterlimit="10"
+                            strokeWidth="2"
+                            d="M30 62h32V2H2v32"
+                          ></path>
+                          <path
+                            data-name="layer1"
+                            strokeMiterlimit="10"
+                            strokeWidth="2"
+                            d="M26 56V38H8m18 0L2 62"
+                          ></path>
+                        </svg>
+                      </a>
+                      {link.source_code && (
                         <a
-                          href={link.live_link}
-                          aria-label="Open Project"
-                          className="external"
+                          href={link.source_code}
+                          aria-label="Open GitHub Code"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -325,24 +312,19 @@ const IndexPage = () => {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
+                            className="github"
                           >
-                            <title>External Link</title>
-                            <desc>A line styled icon</desc>
-                            <path
-                              data-name="layer2"
-                              strokeMiterlimit="10"
-                              strokeWidth="2"
-                              d="M30 62h32V2H2v32"
-                            ></path>
+                            <title>GitHub</title>
+                            <desc>A solid styled icon</desc>
                             <path
                               data-name="layer1"
+                              d="M32 1.952a30.019 30.019 0 0 0-9.469 58.5c1.5.281 2.063-.656 2.063-1.406v-5.625c-8.344 1.779-10.125-3.563-10.125-3.563-1.406-3.469-3.375-4.406-3.375-4.406-2.719-1.875.187-1.781.187-1.781 3 .188 4.594 3.094 4.594 3.094 2.719 4.594 7.031 3.281 8.719 2.531a6.5 6.5 0 0 1 1.875-4.031c-6.656-.75-13.688-3.375-13.688-14.812a11.5 11.5 0 0 1 3.094-8.063 11.217 11.217 0 0 1 .281-7.969s2.531-.844 8.25 3.094a28.944 28.944 0 0 1 7.5-1.031 28.4 28.4 0 0 1 7.5 1.031c5.719-3.844 8.25-3.094 8.25-3.094a11.217 11.217 0 0 1 .281 7.969 11.34 11.34 0 0 1 3.094 8.063c0 11.531-7.031 14.063-13.688 14.813a7.262 7.262 0 0 1 2.063 5.534v8.25c0 .844.562 1.687 2.063 1.406A30.019 30.019 0 0 0 32 1.952z"
                               strokeMiterlimit="10"
-                              strokeWidth="2"
-                              d="M26 56V38H8m18 0L2 62"
+                              strokeLinejoin="round"
                             ></path>
                           </svg>
                         </a>
-                      </div>
+                      )}
                     </div>
 
                     <h3 className="project-title">
@@ -353,11 +335,11 @@ const IndexPage = () => {
                       >
                         {link.name}
                       </a>
-                      {link.featured && (
+                      {/* {link.featured && (
                         <span style={badgeStyle} aria-label="New Badge">
                           FEATURED!
                         </span>
-                      )}
+                      )} */}
                     </h3>
                     <div className="project-description">
                       <p>

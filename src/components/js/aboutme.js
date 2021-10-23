@@ -12,7 +12,7 @@ const HeaderStyles = styled.h5`
   position: relative;
   margin: 10px 0;
   width: 100%;
-  font-size: clamp(26px, 5vw, var(--fz-heading));
+  font-size: clamp(26px, 5vw, var(--text-heading));
   white-space: nowrap;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -55,8 +55,12 @@ const AboutMeTag = styled.section`
   -webkit-box-align: center;
   align-items: center;
   width: 100%;
+  .description {
+    padding-top: 20px;
+  }
   p {
     margin: 0px 0px 15px;
+    letter-spacing: 1px;
   }
   .skill-tags {
     display: grid;
@@ -72,13 +76,15 @@ const AboutMeTag = styled.section`
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
+      font-size: var(--text-xs);
       &::before {
-        content: "▷";
+        content: "•";
+        /* content: ""; */
+        /* content: "▷"; */
         position: absolute;
         left: 0px;
         color: var(--green);
-        font-size: var(--fz-sm);
+        font-size: var(--text-sm);
         line-height: inherit;
       }
     }
@@ -94,10 +100,10 @@ const AboutMe = () => {
 
       <div>
         <div>
-          <div>
+          <div className="description">
             <p>
-              Hello! I'm Madufor Chiemeka and I enjoy building stuffs and most
-              especially the ones that work over the web. I come from an
+              Hello! <br /> I'm Madufor Chiemeka and I enjoy building stuffs and
+              most especially the ones that work over the web. I come from an
               engineering background, Mechanical engineering to be precise. My
               interest in web development began before the completion of my
               undergraduate degree studies. I found myself editing open-source
@@ -131,6 +137,7 @@ const AboutMe = () => {
           <ul className="skill-tags">
             <li>JavaScript</li>
             <li>ReactJS</li>
+            <li>Redux</li>
             <li>NextJS</li>
             <li>Gatsby</li>
             <li>TypeScript</li>

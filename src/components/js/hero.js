@@ -34,7 +34,7 @@ const Hero = styled.section`
     margin: 0px 0px 30px 4px;
     color: var(--green);
     font-family: var(--font-mono);
-    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+    font-size: clamp(var(--text-sm), 5vw, var(--text-md));
     font-weight: 400;
   }
   .big-heading {
@@ -64,7 +64,7 @@ const ButtonAnchor = styled.button`
   border: 1px solid var(--green);
   border-radius: var(--border-radius);
   padding: 1.25rem 1.75rem;
-  font-size: var(--fz-sm);
+  font-size: var(--text-sm);
   font-family: var(--font-mono);
   line-height: 1;
   text-decoration: none;
@@ -72,7 +72,7 @@ const ButtonAnchor = styled.button`
   transition: var(--transition);
   margin-top: 50px;
   &:hover {
-    color: var(--navy);
+    color: var(--main-bg);
     background-color: var(--green);
   }
 `;

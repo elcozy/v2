@@ -15,7 +15,7 @@ const HeaderStyles = styled.h5`
   /* margin: 10px 0px 40px; */
   margin: 10px 0;
   width: 100%;
-  font-size: clamp(26px, 5vw, var(--fz-heading));
+  font-size: clamp(26px, 5vw, var(--text-heading));
   white-space: nowrap;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -76,13 +76,13 @@ const ContactTag = styled.section`
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
+      font-size: var(--text-xs);
       &::before {
         content: "▷";
         position: absolute;
         left: 0px;
         color: var(--green);
-        font-size: var(--fz-sm);
+        font-size: var(--text-sm);
         line-height: inherit;
       }
     }
@@ -91,6 +91,7 @@ const ContactTag = styled.section`
 const ContactBody = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
   justify-content: space-between;
   width: 100%;
   .form-c {
@@ -118,35 +119,45 @@ const Form = styled.form`
       box-sizing: border-box;
       background: transparent;
       caret-color: var(--slate);
-      border: 1px solid var(--green);
-      color: var(--slate);
+      border: 1px solid var(--slate);
+      color: var(--white);
       transition: border 500ms;
-      padding: 1.75rem 1rem 0.5rem;
-      font-size: 1.15rem;
+      padding: 1rem 1.5rem;
+      font-size: var(--text-sm);
+      &:focus-visible,
+      &:focus {
+        border: 1px solid var(--slate);
+        border-radius: 0 !important;
+      }
     }
     textarea {
       height: 220px;
       resize: none;
       font: inherit;
+      font-size: var(--text-sm);
     }
+  }
+  .bottom {
+    display: flex;
+    width: 100%;
   }
 `;
 
 const ButtonAnchor = styled.button`
   color: var(--green);
   background-color: transparent;
-  border: 1px solid var(--green);
+  border: 1px solid var(--slate);
   padding: 1.25rem 1.75rem;
-  width: -webkit-fill-available;
-  font-size: var(--fz-sm);
+  /* width: -webkit-fill-available; */
+  font-size: var(--text-sm);
   font-family: var(--font-mono);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition);
-  margin-top: 20px;
+  margin-top: 0.2rem;
   &:hover {
-    color: var(--navy);
+    color: var(--main-bg);
     background-color: var(--green);
   }
   &:disabled {
@@ -157,8 +168,9 @@ const ButtonAnchor = styled.button`
 // markup
 const Contact = () => {
   const [state, handleSubmit] = useForm("xoqkpjqe");
+
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Submitted Successfully</p>;
   }
   return (
     <ContactTag>
@@ -167,8 +179,6 @@ const Contact = () => {
 
       <ContactBody>
         <div className="form-c" id="contact-me">
-          {/* <HeaderStyles>Email 📧</HeaderStyles> */}
-          {/* <p>maduforchiemeka@gmail.com</p> */}
           <Form onSubmit={handleSubmit}>
             <div className="input-c">
               <input id="name" type="text" name="name" placeholder="Name" />
@@ -193,12 +203,14 @@ const Contact = () => {
                 field="message"
                 errors={state.errors}
               />
-              <small>500 characters left</small>
             </div>
-            <ButtonAnchor type="submit" disabled={state.submitting}>
-              Submit
-            </ButtonAnchor>
+            <div className="bottom">
+              <ButtonAnchor type="submit" disabled={state.submitting}>
+                Submit
+              </ButtonAnchor>
+            </div>
           </Form>
+          {state.submitting && <h5>Submitting... </h5>}
         </div>
       </ContactBody>
     </ContactTag>
