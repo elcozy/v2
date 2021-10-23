@@ -192,11 +192,10 @@ const NavTag = styled.div`
 
 // markup
 const Nav = () => {
-  const [closeNav, setCloseNav] = React.useState(true);
   let closeRef = React.useRef(null);
-  const navClose = () => {
+  function navClose() {
     closeRef.current.checked = false;
-  };
+  }
 
   return (
     <NavTag>

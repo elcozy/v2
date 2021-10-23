@@ -3,8 +3,11 @@ require("dotenv").config({
 });
 
 module.exports = {
+  flags: {
+    FUNCTIONS: true,
+  },
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://elcozy.github.io/p-v2/d",
     title: "portfolio-v2",
   },
   pathPrefix: "/p-v2",
