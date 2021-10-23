@@ -41,7 +41,7 @@ const Hero = styled.section`
     margin: 0px;
     font-size: clamp(27px, 5.2vw, 82px);
     font-weight: 600;
-    color: #eeece6;
+    color: var(--light-slate);
     /* color: var(--lightest-slate); */
     line-height: 1.1;
   }
