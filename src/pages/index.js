@@ -9,6 +9,7 @@ import Footer from "../components/js/footer";
 import { device } from "../components/data";
 import Nav from "../components/js/nav";
 import Projects from "../components/js/projects";
+import AnimatedIcon from "../components/js/themelogo";
 
 const { mobile, mobileL, tablet } = device;
 
@@ -32,10 +33,17 @@ const PageStyles = styled.main`
 
 const FormField = styled.div`
   width: fit-content;
-  position: absolute;
-  top: calc(var(--space) * 1.5);
-  left: calc(var(--space) * 2);
-
+  position: fixed;
+  bottom: calc(var(--space) * 1.5);
+  right: calc(var(--space) * 2);
+  z-index: 50;
+  @media ${mobile} {
+    right: calc(var(--space) * 0.5);
+  }
+  line,
+  circle {
+    stroke: var(--act-white);
+  }
   form {
     background: var(--main-bg);
     position: relative;
@@ -148,7 +156,7 @@ const IndexPage = () => {
           <html class={displayMode} lang="en" />
         </Helmet>
         <FormField>
-          <form>
+          {/* <form>
             <input
               id="light-mode"
               className="toggle"
@@ -162,9 +170,9 @@ const IndexPage = () => {
               Light Mode
             </label>
             <div className="curtain"></div>
-          </form>
+          </form> */}
+          <AnimatedIcon bgSwitch={bgSwitch} />
         </FormField>
-        {/* <button onClick={() => bgSwitch()}>Switch Display Mode</button> */}
         <HeroSection />
       </PageStyles>
       <Nav />
