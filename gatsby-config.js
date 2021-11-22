@@ -1,6 +1,13 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
+  flags: {
+    FUNCTIONS: true,
+  },
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://elcozy.github.io",
     title: "portfolio-v2",
   },
   pathPrefix: "/p-v2",
@@ -10,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-V5KE9T6GZ3",
+        trackingId: "G-TX2X6DQEKM",
       },
     },
     "gatsby-plugin-react-helmet",
