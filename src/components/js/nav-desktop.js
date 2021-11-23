@@ -29,6 +29,8 @@ const NavTag = styled.div`
   position: sticky;
 
   .design {
+    margin: 0px auto;
+  max-width: 1000px;
     width: 100%;
     min-height: 50px;
 
