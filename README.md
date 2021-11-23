@@ -7,7 +7,6 @@
   Gatsby minimal starter
 </h1>
 
-[![Node.js CI](https://github.com/elcozy/p-v2/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/elcozy/p-v2/actions/workflows/node.js.yml)
 
 ## 🚀 Quick start
 
