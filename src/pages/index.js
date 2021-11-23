@@ -6,7 +6,7 @@ import HeroSection from "../components/js/hero";
 import AboutMe from "../components/js/aboutme";
 import Contact from "../components/js/contact";
 import Footer from "../components/js/footer";
-import { device } from "../components/data";
+import { device, isDark } from "../components/data";
 import Nav from "../components/js/nav";
 import Projects from "../components/js/projects";
 import AnimatedIcon from "../components/js/themelogo";
@@ -138,8 +138,14 @@ const FormField = styled.div`
   }
 `;
 
+
+
+
 const IndexPage = () => {
-  const [displayMode, setDisplayMode] = React.useState("dark");
+
+  const userDeviceTheme = isDark ? "dark" : "light";
+
+  const [displayMode, setDisplayMode] = React.useState(userDeviceTheme);
   const [transit, setTransit] = React.useState("enter-");
 
   const bgSwitch = () => {
@@ -156,21 +162,6 @@ const IndexPage = () => {
           <html class={displayMode} lang="en" />
         </Helmet>
         <FormField>
-          {/* <form>
-            <input
-              id="light-mode"
-              className="toggle"
-              type="checkbox"
-              name="Light mode"
-              role="switch"
-              value="on"
-              onClick={() => bgSwitch()}
-            />
-            <label htmlFor="light-mode" className="sr">
-              Light Mode
-            </label>
-            <div className="curtain"></div>
-          </form> */}
           <AnimatedIcon bgSwitch={bgSwitch} />
         </FormField>
         <HeroSection />

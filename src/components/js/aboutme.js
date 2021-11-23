@@ -39,15 +39,15 @@ const HeaderStyles = styled.h5`
     }
   }
 `;
-const SubHeaderStyles = styled.h2`
-  display: flex;
-  margin: 10px 0;
-  width: 100%;
-  white-space: nowrap;
-  font-size: 3.1rem;
-  text-transform: capitalize;
-  color: var(--lightest-slate);
-`;
+// const SubHeaderStyles = styled.h2`
+//   display: flex;
+//   margin: 10px 0;
+//   width: 100%;
+//   white-space: nowrap;
+//   font-size: 3.1rem;
+//   text-transform: capitalize;
+//   color: var(--lightest-slate);
+// `;
 
 const AboutMeTag = styled.section`
   display: flex;
@@ -96,7 +96,7 @@ const AboutMe = () => {
   return (
     <AboutMeTag id="about-me">
       <HeaderStyles>About Me</HeaderStyles>
-      <SubHeaderStyles>A little About Me 🙂</SubHeaderStyles>
+      {/* <SubHeaderStyles>A little About Me 🙂</SubHeaderStyles> */}
 
       <div>
         <div>
@@ -116,7 +116,7 @@ const AboutMe = () => {
 
             <p>
               I enrolled to different courses on Web Development, After 2 months
-              startign my first course, I built my first portfolio using pure
+              starting my first course, I built my first portfolio using pure
               VanillaJS/HTML/CSS without the use of any library. After which I
               joined a 3-month remote{" "}
               <a href="https://hng.tech/" alt="HNG">
