@@ -28,23 +28,7 @@ const Nav = () => {
     };
   });
 
-  const [stickyNav, setStickyNav] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      window.pageYOffset > window.innerHeight
-      ? setStickyNav(true)
-      : setStickyNav(false);
-      console.log(stickyNav);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return (_) => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
-
-  return <>{isDesktop ? <NavDesktop stickyNav={stickyNav} /> : <NavMobile />}</>;
+  return <>{isDesktop ? <NavDesktop/> : <NavMobile />}</>;
 };
 
 export default Nav;

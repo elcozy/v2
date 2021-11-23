@@ -7,8 +7,7 @@ import { device } from "../../components/data";
 
 const { mobile, mobileL, tablet } = device;
 
-// const NavTag = styled.div`
-const NavTag = styled.div.attrs((props) => ({ className: props.className }))`
+const NavTag = styled.div`
   padding: 0px 150px;
   font-family: var(--font-main);
   margin: 0px auto;
@@ -25,11 +24,9 @@ const NavTag = styled.div.attrs((props) => ({ className: props.className }))`
   background: var(--main-bg);
   box-shadow: 0 28px 54px -3px var(--primary);
 
-  &.sticky {
-    position: sticky;
-    z-index: 99;
-    top: 0;
-  }
+  z-index: 99;
+  top: 0;
+  position: sticky;
 
   .design {
     width: 100%;
@@ -47,7 +44,9 @@ const NavTag = styled.div.attrs((props) => ({ className: props.className }))`
       height: 100%;
       color: var(--lightest-slate);
       /* z-index: 1; */
-
+.logo{
+  font-weight: bold;
+}
       ul {
         display: flex;
         flex: 1;
@@ -65,7 +64,6 @@ const NavTag = styled.div.attrs((props) => ({ className: props.className }))`
         display: inline-block;
         width: 100%;
         margin: 0 auto;
-        /* color: var(--light-tc); */
         line-height: 1;
         text-decoration: none;
         user-select: none;
@@ -75,46 +73,31 @@ const NavTag = styled.div.attrs((props) => ({ className: props.className }))`
 `;
 
 // markup
-
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
-
-const NavDesktop = (stickyNav) => {
-
+const NavDesktop = () => {
   return (
-    <>
-      <NavTag className={`${stickyNav ? "sticky":''}`}>
-        <div className="design">
-          <nav className="main-navigation">
-            <div className="logo">
-              <p>Reynolds M</p>
-            </div>
-            <ul>
-              <li>
-                <Link to="/#">Home</Link>
-              </li>
-              <li>
-                <Link to="#about-me">About Me</Link>
-              </li>
-              <li>
-                <Link to="#projects">Projects</Link>
-              </li>
-              <li>
-                <Link to="#contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </NavTag>
-    </>
+    <NavTag>
+      <div className="design">
+        <nav className="main-navigation">
+          <div className="logo">
+            <p>Chiemeka M</p>
+          </div>
+          <ul>
+            <li>
+              <Link to="/#">Home</Link>
+            </li>
+            <li>
+              <Link to="#about-me">About Me</Link>
+            </li>
+            <li>
+              <Link to="#projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="#contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </NavTag>
   );
 };
 
