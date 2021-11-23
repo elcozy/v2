@@ -35,7 +35,7 @@ const Hero = styled.section`
     font-weight: 600;
     line-height: 1.1;
 
-    -webkit-text-stroke: px var(--slate);
+    -webkit-text-stroke: 1.1px var(--slate);
     color: transparent;
 
     @media ${mobile} {

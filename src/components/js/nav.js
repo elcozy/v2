@@ -16,8 +16,11 @@ function debounce(fn, ms) {
 
 // markup
 const Nav = () => {
-  let innerWidth = typeof window !== "undefined" && window.innerWidth
-  const [isDesktop, setIsDesktop] = React.useState( innerWidth>= 992);
+  const [isDesktop, setIsDesktop] = React.useState(false);
+React.useEffect(() => {
+  setIsDesktop(window.innerWidth)
+}, [])
+
   React.useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
       window.innerWidth >= 992 ? setIsDesktop(true) : setIsDesktop(false);

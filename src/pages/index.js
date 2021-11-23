@@ -143,7 +143,7 @@ const FormField = styled.div`
 
 const IndexPage = () => {
 
-  const userDeviceTheme = isDark ? "dark" : "light";
+  const userDeviceTheme = isDark() ? "dark" : "light";
 
   const [displayMode, setDisplayMode] = React.useState(userDeviceTheme);
   const [transit, setTransit] = React.useState("enter-");
