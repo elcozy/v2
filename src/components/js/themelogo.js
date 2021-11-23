@@ -1,8 +1,9 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import { isDark } from "../data";
 
 const AnimatedIcon = ({ bgSwitch }) => {
-  const [isDarkMode, setDarkMode] = React.useState(false);
+  const [isDarkMode, setDarkMode] = React.useState(!isDark);
 
   const properties = {
     dark: {

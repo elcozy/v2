@@ -10,6 +10,7 @@ html {
 body {
   margin: 0px;
   width: 100%;
+  scroll-behavior: smooth;
   min-height: 100%;
   overflow-x: hidden;
   /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAPklEQVQYV2O8dOnSfwYg0NPTYwTRuAAj0QqxmYBNM1briFaIzRbi3UiRZ75uNgUHGbfvabgfsHqGaIXYPAMAD8wgC/DOrZ4AAAAASUVORK5CYII=); */
@@ -79,7 +80,7 @@ p > a {
   --light-tc: #e1e1e1;
   --lightest-slate: #bbbbbb;
   --white: #e6f1ff;
-  --bg-inv: #fdfdfd
+  --bg-inv: #fdfdfd;
 }
 :root.light {
   --main-bg: #f5f5f5;
@@ -93,16 +94,14 @@ p > a {
   --light-tc: #464646;
   --lightest-slate: #000;
   --white: rgb(41, 41, 41);
-  --bg-inv: #01070d
+  --bg-inv: #01070d;
 }
 
-.enter-active{
-    opacity: 0;
-    transition: opacity 300ms ease 0s;
-
+.enter-active {
+  opacity: 0;
+  transition: opacity 300ms ease 0s;
 }
-.enter-done{
-    opacity: 1;
-    transition: opacity 300ms ease 0s;
-
+.enter-done {
+  opacity: 1;
+  transition: opacity 300ms ease 0s;
 }

@@ -35,7 +35,7 @@ const Hero = styled.section`
     font-weight: 600;
     line-height: 1.1;
 
-    -webkit-text-stroke: 0.6px var(--slate);
+    -webkit-text-stroke: px var(--slate);
     color: transparent;
 
     @media ${mobile} {
@@ -89,6 +89,7 @@ const HeroSection = () => {
           web applications.
         </p>
       </div>
+      
       <div>
         <ButtonAnchor
           as="a"

@@ -192,7 +192,7 @@ const NavTag = styled.div`
 `;
 
 // markup
-const Nav = () => {
+const NavMobile = () => {
   let closeRef = React.useRef(null);
   function navClose() {
     closeRef.current.checked = false;
@@ -252,4 +252,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavMobile;
