@@ -6,7 +6,9 @@ const size = {
   desktopL: "1440px",
 };
 
-export const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches
+export const isDark = () => typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme:dark)").matches;
+
+// export const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches
 
 export const device = {
   mobile: `(max-width: ${size.mobile})`,
