@@ -21,8 +21,8 @@ const NavTag = styled.div`
   @media ${mobile} {
     padding: 0px 25px;
   }
-  background: var(--main-bg);
-  box-shadow: 0 28px 54px -3px var(--primary);
+  background: var(--primary);
+  box-shadow: 0 28px 54px -18px var(--main-bg);
 
   z-index: 99;
   top: 0;
@@ -30,7 +30,7 @@ const NavTag = styled.div`
 
   .design {
     margin: 0px auto;
-  max-width: 1000px;
+  max-width: 1200px;
     width: 100%;
     min-height: 50px;
 

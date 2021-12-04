@@ -6,6 +6,7 @@ const { mobile } = device;
 
 // styles
 const Hero = styled.section`
+/* background-image: linear-gradient(315deg, var(--main-bg) 0%, var(--primary) 74%); */
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;

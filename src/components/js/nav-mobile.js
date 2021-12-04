@@ -18,7 +18,7 @@ const NavTag = styled.div`
         top: calc(var(--space) * 1.5);
         right: calc(var(--space) * 2);
         cursor: pointer;
-        z-index: 2;
+        z-index: 20;
       }
     }
 
@@ -65,7 +65,12 @@ const NavTag = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--main-bg);
+        /* background-color: var(--main-bg); */
+        background-image: linear-gradient(
+          315deg,
+          var(--main-bg) 0%,
+          var(--primary) 74%
+        );
         transform-origin: 0 50%;
         z-index: -1;
       }

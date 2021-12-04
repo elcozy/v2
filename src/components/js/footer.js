@@ -91,6 +91,8 @@ const FooterTag = styled.section`
 
 // markup
 const Footer = () => {
+  const [year] = React.useState(new Date().getFullYear())
+  
   return (
     <PageStyles>
       <FooterTag>
@@ -193,7 +195,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              © 2021 Madufor Chiemeka
+              © {year} Madufor Chiemeka
             </a>
           </div>
         </footer>

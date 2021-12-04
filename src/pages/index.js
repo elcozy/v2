@@ -8,14 +8,21 @@ import Contact from "../components/js/contact";
 import Footer from "../components/js/footer";
 import { device, isDark } from "../components/data";
 import Nav from "../components/js/nav";
-import Projects from "../components/js/projects";
+// import Projects from "../components/js/projects";
 import AnimatedIcon from "../components/js/themelogo";
+import ProjectsAlt from "../components/js/projects-alt";
+import Seo from "../components/js/SEO";
 
 const { mobile, mobileL, tablet } = device;
 
 // styles
 const PageStyles = styled.main`
   padding: 0px 150px;
+  background-image: linear-gradient(
+    315deg,
+    var(--main-bg) 0%,
+    var(--primary) 74%
+  );
   font-family: var(--font-main);
   margin: 0px auto;
   max-width: 1600px;
@@ -138,11 +145,7 @@ const FormField = styled.div`
   }
 `;
 
-
-
-
 const IndexPage = () => {
-
   const userDeviceTheme = isDark() ? "dark" : "light";
 
   const [displayMode, setDisplayMode] = React.useState(userDeviceTheme);
@@ -157,8 +160,9 @@ const IndexPage = () => {
   };
   return (
     <div className={transit}>
+      <Seo title="Home" />
       <PageStyles>
-        <Helmet title="Madufor Chiemeka — Portfolio">
+        <Helmet title="Madufor Chiemeka — Portfolio" defer={false}>
           <html class={displayMode} lang="en" />
         </Helmet>
         <FormField>
@@ -169,7 +173,8 @@ const IndexPage = () => {
       <Nav />
       <PageStyles>
         <AboutMe />
-        <Projects />
+        {/* <Projects /> */}
+        <ProjectsAlt />
         <Contact />
       </PageStyles>
       <Footer />

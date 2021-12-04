@@ -29,6 +29,7 @@ export const portfolioLinks = [
     source_code: "https://github.com/elcozy/Lasles-VPN",
     description: "LaslesVPN, a VPN application's landing page.",
     img_src: "lasles-vpn-elcozy.vercel.app_\\(1440px\\).png",
+    img_src2: "lasles-vpn-elcozy.vercel.app_(1440px).png",
   },
   {
     rank: 1.02,
@@ -37,6 +38,7 @@ export const portfolioLinks = [
     source_code: "",
     description: "An iGaming betting website's landing page",
     img_src: "betverse.netlify.app_\\(1366px\\).png",
+    img_src2: "betverse.netlify.app_(1366px).png",
   },
   {
     rank: 1.07,
@@ -47,6 +49,7 @@ export const portfolioLinks = [
     description:
       "Clinify is a health information management system that leverages the capabilities of Artificial intelligence to improve health outcomes... ",
     img_src: "myclinify.com_\\(1366px\\).png",
+    img_src2: "myclinify.com_(1366px).png",
   },
   {
     rank: 1.072,
@@ -56,7 +59,8 @@ export const portfolioLinks = [
     description: "A hotel website template.",
     img_src:
       "elcozy-hotel-deluxe.vercel.app_roomsandRates.html\\(1366px\\).png",
-  },
+      img_src2: "elcozy-hotel-deluxe.vercel.app_roomsandRates.html(1366px).png",
+    },
   {
     rank: 1.08,
     name: "Stratify",
@@ -64,6 +68,7 @@ export const portfolioLinks = [
     source_code: "",
     description: "",
     img_src: "www.yourstratify.com_\\(1366px\\).png",
+    img_src2: "www.yourstratify.com_(1366px).png",
   },
   {
     rank: 1.085,
@@ -72,6 +77,7 @@ export const portfolioLinks = [
     source_code: "https://github.com/elcozy/spacestagram",
     description: "",
     img_src: "spacestagram-elcozy.netlify.app_\\(1366px\\).png",
+    img_src2: "spacestagram-elcozy.netlify.app_(1366px).png",
   },
   {
     rank: 1.09,
@@ -82,6 +88,7 @@ export const portfolioLinks = [
     description:
       "A covid19 NG tracker dispalying data in a visual form on the countries map, It gets updated daily from the API",
     img_src: "elcozy.github.io_covid19-nigeria_\\(1366px\\).png",
+    img_src2: "elcozy.github.io_covid19-nigeria_(1366px).png",
   },
   {
     rank: 1.1,
@@ -91,6 +98,7 @@ export const portfolioLinks = [
     description:
       "SVG URL encoder is an app that is used to encode the SVG code into a base64 code",
     img_src: "elcozy.github.io_svg-url-encoder_\\(1366px\\).png",
+    img_src2: "elcozy.github.io_svg-url-encoder_(1366px).png",
   },
   {
     rank: 1.2,
@@ -99,6 +107,7 @@ export const portfolioLinks = [
     source_code: "https://github.com/elcozy/Starwars-page",
     description: "",
     img_src: "reynolds-starwars.netlify.app_dashboard\\(1366px\\).png",
+    img_src2: "reynolds-starwars.netlify.app_dashboard(1366px).png",
   },
   {
     rank: 2,
@@ -156,5 +165,6 @@ export const portfolioLinks = [
     source_code: "https://github.com/elcozy/smart-brain",
     description: "A web app that scans and detects faces on uploaded images ",
     img_src: "elcozy.github.io_smart-brain_\\(1366px\\).png",
+    img_src2: "elcozy.github.io_smart-brain_(1366px).png",
   },
 ];

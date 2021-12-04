@@ -7,10 +7,16 @@ module.exports = {
     FUNCTIONS: true,
   },
   siteMetadata: {
-    siteUrl: "https://elcozy.github.io",
-    title: "portfolio-v2",
+    url: "https://www.maduforchiemeka.com",
+    siteUrl: "https://www.maduforchiemeka.com",
+    title: "Madufor Chiemeka's Portfolio",
+    description: `Madufor Chimeka's portfolio site created using GatsbyJS.`,
+    author: 'Madufor Chiemeka',
+    image: "src/images/icon.png",
+    keywords:
+      "Madufor, Chiemeka, Reynolds, Madufor Chiemeka Reynolds, elcozy, Madufor Chiemeka, Frontend developer, Madufor Reynolds, fonmand, Reynolds, frontend, front-end, el_cozy, freelancer",
   },
-  pathPrefix: "/p-v2",
+  pathPrefix: "/",
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
@@ -20,14 +26,9 @@ module.exports = {
         trackingId: "G-TX2X6DQEKM",
       },
     },
+
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
