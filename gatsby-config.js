@@ -11,8 +11,8 @@ module.exports = {
     siteUrl: "https://www.maduforchiemeka.com",
     title: "Madufor Chiemeka's Portfolio",
     description: `Madufor Chimeka's portfolio site created using GatsbyJS.`,
-    author: 'Madufor Chiemeka',
-    image: "src/images/icon.png",
+    author: "Madufor Chiemeka",
+    image: "https://i.ibb.co/hL4ymKg/icon.png",
     keywords:
       "Madufor, Chiemeka, Reynolds, Madufor Chiemeka Reynolds, elcozy, Madufor Chiemeka, Frontend developer, Madufor Reynolds, fonmand, Reynolds, frontend, front-end, el_cozy, freelancer",
   },

@@ -92,7 +92,7 @@ const Project = styled.div.attrs((props) => props)`
   display: flex;
   min-height: 30rem;
   border: 1px solid var(--black);
-
+height: auto;
   transition: 0.5s;
   position: relative;
   cursor: default;
@@ -197,13 +197,15 @@ const Project = styled.div.attrs((props) => props)`
         font-size: var(--text-sm);
       }
     }
-    .preview{
-        img{
-      max-width: 100%;
-      height: auto;
+    .preview {
+      margin-bottom: 1rem;
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 768px;
+      }
     }
-    }
-  
+
     .bottom {
       ul {
         display: flex;
@@ -273,7 +275,6 @@ const ProjectCard = (link) => {
   return (
     <div className="project-card">
       <div className="heading">
-       
         <div className="project-links">
           <a
             href={live_link}
@@ -338,21 +339,23 @@ const ProjectCard = (link) => {
             </a>
           )}
         </div>
-        <div className='preview'>
+        <div className="preview">
           <img
-          src={`https://www.maduforchiemeka.com/img/${
-            img_src2 ? img_src2 : img_src
-          }`}
-          alt="name"
-        /> 
+            src={
+              img_src2
+                ? `https://www.maduforchiemeka.com/v1/img/${img_src2}`
+                : img_src
+            }
+            alt="img preview"
+          />
         </div>
-       
+
         <h3 className="project-title">
           <a href={live_link} target="_blank" rel="noopener noreferrer">
             {name}
           </a>
-        </h3> 
-       
+        </h3>
+
         <div className="project-description">
           <p>
             {description
@@ -360,7 +363,6 @@ const ProjectCard = (link) => {
               : "Converted a figma design into a responsive and user-friendly website"}
           </p>
         </div>
-        
       </div>
 
       <div className="bottom">

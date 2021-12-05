@@ -28,8 +28,7 @@ export const portfolioLinks = [
     live_link: "https://lasles-vpn-elcozy.vercel.app/",
     source_code: "https://github.com/elcozy/Lasles-VPN",
     description: "LaslesVPN, a VPN application's landing page.",
-    img_src: "lasles-vpn-elcozy.vercel.app_\\(1440px\\).png",
-    img_src2: "lasles-vpn-elcozy.vercel.app_(1440px).png",
+    img_src: "https://i.ibb.co/yVcCgRj/lasles.png",
   },
   {
     rank: 1.02,
@@ -37,8 +36,7 @@ export const portfolioLinks = [
     live_link: "https://betverse.netlify.app/",
     source_code: "",
     description: "An iGaming betting website's landing page",
-    img_src: "betverse.netlify.app_\\(1366px\\).png",
-    img_src2: "betverse.netlify.app_(1366px).png",
+    img_src: "https://i.ibb.co/tXtbbcM/betverse.png",
   },
   {
     rank: 1.07,
@@ -48,8 +46,7 @@ export const portfolioLinks = [
     source_code: "",
     description:
       "Clinify is a health information management system that leverages the capabilities of Artificial intelligence to improve health outcomes... ",
-    img_src: "myclinify.com_\\(1366px\\).png",
-    img_src2: "myclinify.com_(1366px).png",
+    img_src: "https://i.ibb.co/7jLwChF/myclinify.png",
   },
   {
     rank: 1.072,
@@ -57,10 +54,8 @@ export const portfolioLinks = [
     live_link: "https://elcozy-hotel-deluxe.vercel.app/",
     source_code: "",
     description: "A hotel website template.",
-    img_src:
-      "elcozy-hotel-deluxe.vercel.app_roomsandRates.html\\(1366px\\).png",
-      img_src2: "elcozy-hotel-deluxe.vercel.app_roomsandRates.html(1366px).png",
-    },
+    img_src: "https://i.ibb.co/HqcXs0W/deluxe.png",
+  },
   {
     rank: 1.08,
     name: "Stratify",
@@ -87,8 +82,7 @@ export const portfolioLinks = [
     source_code: "https://github.com/elcozy/covid19-nigeria",
     description:
       "A covid19 NG tracker dispalying data in a visual form on the countries map, It gets updated daily from the API",
-    img_src: "elcozy.github.io_covid19-nigeria_\\(1366px\\).png",
-    img_src2: "elcozy.github.io_covid19-nigeria_(1366px).png",
+    img_src: "https://i.ibb.co/Kz6TsGj/covid19.png",
   },
   {
     rank: 1.1,
@@ -115,7 +109,7 @@ export const portfolioLinks = [
     live_link: "https://reynolds-photography.netlify.app/",
     source_code: "https://github.com/elcozy/Photagraphy-Portfolio-Template-HNG",
     description: "A photographer's portfolio website template",
-    img_src: "reynolds-photography.netlify.app_.png",
+    img_src2: "reynolds-photography.netlify.app_.png",
   },
   {
     rank: 3,
@@ -124,7 +118,7 @@ export const portfolioLinks = [
     source_code:
       "https://github.com/elcozy/Team-Avenger-Envato-Marketing/tree/design-1",
     description: "A marketer's portfolio website template",
-    img_src: "reynolds-marketing.netlify.app_.png",
+    img_src2: "reynolds-marketing.netlify.app_.png",
   },
   {
     rank: 4,
@@ -132,7 +126,7 @@ export const portfolioLinks = [
     live_link: "https://elcozy.github.io/blog-website-template/",
     source_code: "https://github.com/elcozy/blog-website-template",
     description: "A blog ",
-    img_src: "elcozy.github.io_blog-website-template.png",
+    img_src2: "elcozy.github.io_blog-website-template.png",
   },
   {
     rank: 5,
@@ -140,7 +134,7 @@ export const portfolioLinks = [
     live_link: "https://reynolds-design.netlify.app/",
     source_code: "https://github.com/elcozy/woodly-designs-template",
     description: "",
-    img_src: "reynolds-design.netlify.app_.png",
+    img_src2: "reynolds-design.netlify.app_.png",
   },
   {
     rank: 6,
@@ -148,7 +142,7 @@ export const portfolioLinks = [
     live_link: "https://elcozy.github.io/Translegal-HNG/",
     source_code: "https://github.com/elcozy/Translegal-HNG",
     description: "",
-    img_src: "covidng.000webhostapp.com_.png",
+    img_src: "https://i.ibb.co/xgLpRXg/scanlegal.png",
   },
   {
     rank: 7,
@@ -156,7 +150,7 @@ export const portfolioLinks = [
     live_link: "https://elcozy.github.io/pricing-component-with-toggle/",
     source_code: "https://github.com/elcozy/pricing-component-with-toggle",
     description: "",
-    img_src: "elcozy.github.io_pricing-component-with-toggle_.png",
+    img_src2: "elcozy.github.io_pricing-component-with-toggle_.png",
   },
   {
     rank: 8,
@@ -164,7 +158,6 @@ export const portfolioLinks = [
     live_link: "https://elcozy.github.io/smart-brain/",
     source_code: "https://github.com/elcozy/smart-brain",
     description: "A web app that scans and detects faces on uploaded images ",
-    img_src: "elcozy.github.io_smart-brain_\\(1366px\\).png",
-    img_src2: "elcozy.github.io_smart-brain_(1366px).png",
+    img_src: "https://i.ibb.co/C8Z2CgT/smart-brain.png",
   },
 ];

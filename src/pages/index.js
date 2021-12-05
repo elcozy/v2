@@ -164,6 +164,11 @@ const IndexPage = () => {
       <PageStyles>
         <Helmet title="Madufor Chiemeka — Portfolio" defer={false}>
           <html class={displayMode} lang="en" />
+          <link
+          rel="icon"
+          type="image/png"
+          href="../images/icon.png"
+        />
         </Helmet>
         <FormField>
           <AnimatedIcon bgSwitch={bgSwitch} />
