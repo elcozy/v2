@@ -92,7 +92,7 @@ const Project = styled.div.attrs((props) => props)`
   display: flex;
   /* min-height: 30rem; */
   border: 1px solid var(--black);
-height: initial;
+  height: initial;
   transition: 0.5s;
   position: relative;
   cursor: default;
@@ -271,7 +271,16 @@ const ProjectsAlt = () => {
 export default ProjectsAlt;
 
 const ProjectCard = (link) => {
-  const { live_link, name, source_code, description, img_src2, img_src } = link;
+  const {
+    live_link,
+    name,
+    source_code,
+    description,
+    img_src2,
+    img_src,
+    stack_used,
+  } = link;
+  const dummy_stack = ["reactjs", "scss", "firebase", "firebase"];
   return (
     <div className="project-card">
       <div className="heading">
@@ -367,12 +376,9 @@ const ProjectCard = (link) => {
 
       <div className="bottom">
         <ul className="project-tech-list">
-          <li>ReactJS</li>
-          <li>SCSS</li>
-          <li>Firebase</li>
-          <li>Firebase</li>
-          <li>Firebase</li>
-          <li>Firebase</li>
+          {stack_used
+            ? stack_used.map((a) => <li>{a}</li>)
+            : dummy_stack.map((a) => <li>{a}</li>)}
         </ul>
       </div>
     </div>

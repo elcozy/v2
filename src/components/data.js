@@ -29,6 +29,7 @@ export const portfolioLinks = [
     source_code: "https://github.com/elcozy/Lasles-VPN",
     description: "LaslesVPN, a VPN application's landing page.",
     img_src: "https://i.ibb.co/yVcCgRj/lasles.png",
+    stack_used: ['reactjs', 'scss']
   },
   {
     rank: 1.02,
@@ -37,6 +38,7 @@ export const portfolioLinks = [
     source_code: "",
     description: "An iGaming betting website's landing page",
     img_src: "https://i.ibb.co/tXtbbcM/betverse.png",
+    stack_used: ['reactjs', 'scss', 'bootstrap']
   },
   {
     rank: 1.07,
@@ -47,6 +49,7 @@ export const portfolioLinks = [
     description:
       "Clinify is a health information management system that leverages the capabilities of Artificial intelligence to improve health outcomes... ",
     img_src: "https://i.ibb.co/7jLwChF/myclinify.png",
+    stack_used: ['reactjs', 'scss', 'nextjs']
   },
   {
     rank: 1.072,
@@ -55,6 +58,7 @@ export const portfolioLinks = [
     source_code: "",
     description: "A hotel website template.",
     img_src: "https://i.ibb.co/HqcXs0W/deluxe.png",
+    stack_used: ['html', 'css', 'javascript']
   },
   {
     rank: 1.08,
@@ -64,6 +68,7 @@ export const portfolioLinks = [
     description: "",
     img_src: "www.yourstratify.com_\\(1366px\\).png",
     img_src2: "www.yourstratify.com_(1366px).png",
+    stack_used: ['nextjs', 'scss', ]
   },
   {
     rank: 1.085,
@@ -73,6 +78,7 @@ export const portfolioLinks = [
     description: "",
     img_src: "spacestagram-elcozy.netlify.app_\\(1366px\\).png",
     img_src2: "spacestagram-elcozy.netlify.app_(1366px).png",
+    stack_used: ['react', 'css', 'api', 'material-ui']
   },
   {
     rank: 1.09,
@@ -83,6 +89,7 @@ export const portfolioLinks = [
     description:
       "A covid19 NG tracker dispalying data in a visual form on the countries map, It gets updated daily from the API",
     img_src: "https://i.ibb.co/Kz6TsGj/covid19.png",
+    stack_used: ['html', 'css', 'javascript','api']
   },
   {
     rank: 1.1,
