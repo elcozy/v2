@@ -90,9 +90,9 @@ const Project = styled.div.attrs((props) => props)`
   background-repeat: no-repeat;
   padding: 2rem 1.75rem;
   display: flex;
-  min-height: 30rem;
+  /* min-height: 30rem; */
   border: 1px solid var(--black);
-height: auto;
+height: initial;
   transition: 0.5s;
   position: relative;
   cursor: default;
