@@ -32,7 +32,7 @@ const Hero = styled.section`
   }
   h3.medium-heading {
     margin: 0px;
-    font-family: var(--font-stroke);
+    font-family: var(--font-sans);
     font-size: clamp(25px, 4.7vw, 77px);
     font-weight: 600;
     line-height: 1.1;

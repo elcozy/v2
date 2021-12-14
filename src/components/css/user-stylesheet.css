@@ -55,7 +55,7 @@ p > a {
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 :root {
   --font-main: "Inter", sans-serif;
-  --font-stroke: "Arial", sans-serif;
+  --font-sans: sans-serif;
   --font-code: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --text-xxs: 12px;
   --text-xs: 13px;
