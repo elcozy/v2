@@ -6,7 +6,7 @@ const { mobile } = device;
 
 // styles
 const Hero = styled.section`
-/* background-image: linear-gradient(315deg, var(--main-bg) 0%, var(--primary) 74%); */
+  /* background-image: linear-gradient(315deg, var(--main-bg) 0%, var(--primary) 74%); */
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
@@ -32,10 +32,10 @@ const Hero = styled.section`
   }
   h3.medium-heading {
     margin: 0px;
+    font-family: var(--font-stroke);
     font-size: clamp(25px, 4.7vw, 77px);
     font-weight: 600;
     line-height: 1.1;
-
     -webkit-text-stroke: 1.1px var(--slate);
     color: transparent;
 
@@ -90,7 +90,7 @@ const HeroSection = () => {
           web applications.
         </p>
       </div>
-      
+
       <div>
         <ButtonAnchor
           as="a"
