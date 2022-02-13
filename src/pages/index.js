@@ -169,6 +169,7 @@ const IndexPage = () => {
           type="image/png"
           href="../images/icon.png"
         />
+            <meta name="image" property="og:image" content="https://avatars.githubusercontent.com/u/61386343?v=4"/>
         </Helmet>
         <FormField>
           <AnimatedIcon bgSwitch={bgSwitch} />
