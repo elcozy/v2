@@ -126,8 +126,8 @@ const AboutMe = () => {
               which I had to work on real world software with different teams
             </p> */}
             <p>
-              I have worked to work with a medical startup,
-              an educational agency, iGaming startup and other freelanced
+              I have worked with medical startups,
+               educational agency, iGaming startups and other freelanced
               clients remotely.
             </p>
             <p>
