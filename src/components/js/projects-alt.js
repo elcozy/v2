@@ -352,7 +352,7 @@ const ProjectCard = (link) => {
           <img
             src={
               img_src2
-                ? `https://www.maduforchiemeka.com/v1/img/${img_src2}`
+                ? `https://www.maduforchiemeka.com/Portfolio-v1/img/${img_src2}`
                 : img_src
             }
             alt="img preview"
